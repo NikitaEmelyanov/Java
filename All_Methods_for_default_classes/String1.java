@@ -6,6 +6,7 @@ public class String1 {
         String string = "Hello my fried ";
         String string1 = "We learn Java language";
 
+        System.out.println("Hello my world");
         char q = string.charAt(1);
         System.out.println(q);
         //Метод charAt(int index) -  Возвращает значение char по указанному индексу.
