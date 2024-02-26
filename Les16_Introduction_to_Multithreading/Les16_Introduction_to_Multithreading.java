@@ -1,4 +1,4 @@
-package JavaPRO;
+package Les16_Introduction_to_Multithreading;
 
 public class Les16_Introduction_to_Multithreading {
     public static void main(String[] args) throws InterruptedException {

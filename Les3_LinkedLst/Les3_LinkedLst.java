@@ -1,4 +1,4 @@
-package JavaPRO;
+package Les3_LinkedLst;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
