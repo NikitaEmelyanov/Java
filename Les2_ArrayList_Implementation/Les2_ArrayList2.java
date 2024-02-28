@@ -1,4 +1,4 @@
-package Les2_ArrayList2;
+package Les2_ArrayList_Implementation;
 
 import java.util.ArrayList;
 import java.util.List;

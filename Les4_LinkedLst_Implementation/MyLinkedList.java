@@ -1,4 +1,4 @@
-package Les4_LinkedLst2;
+package Les4_LinkedLst_Implementation;
 
 import java.util.Arrays;
 
