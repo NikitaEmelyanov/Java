@@ -10,10 +10,10 @@ public class Les35_Anonimous_Classes {
 
         //Анонимные классы нужно использовать когда есть объект, который очень похож на
         // основной объект, но при этом имеет существенные отличия
-        Animal animal = new Animal();
-        animal.eat();
+        Animal1 animal1 = new Animal1();
+        animal1.eat();
 
-        Animal animal2 = new Animal() {
+        Animal1 animal2 = new Animal1() {
             public void eat (){
                 System.out.println("Other animal is eating....");
             }
@@ -26,7 +26,7 @@ public class Les35_Anonimous_Classes {
     }
 }
 
-class Animal implements AbleToEat{
+class Animal2 implements AbleToEat{
     public void eat(){
         System.out.println("Animal is eating...");
 

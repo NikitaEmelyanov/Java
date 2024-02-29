@@ -36,6 +36,8 @@ public class Les33_Generics {
         // с другим типом данных, так как будет ошибка компиляции
     }
 }
-class Animal{
+class Animal1 {
 
+    public void eat() {
+    }
 }
