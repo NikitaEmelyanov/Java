@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class Les11_Comparator_1 {
+public class Les11_Comparator {
     public static void main(String[] args) {
         //Урок 11: Интерфейс Comparator(Англ. тот кто сравнивает) - Сортировка объектов
         List<Person123> people = new ArrayList<>();
