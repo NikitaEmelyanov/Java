@@ -8,8 +8,32 @@ import java.util.List;
 public class Les11_Comparator_1 {
     public static void main(String[] args) {
         //Урок 11: Интерфейс Comparator (Сортировка объектов)
-        List<String> animals = new ArrayList<>();
+        List<Person123> people = new ArrayList<>();
+        people.add (new Person123 ( 3,"Mike"));
+        people.add (new Person123 ( 1,"Bob"));
+        people.add (new Person123 ( 2,"Katy"));
 
+        Collections.sort(people, new Comparator<Person123>() {
+            //При сортировке объектов будет ошибка, так как мы не указали в классе Person порядок
+            //сортировки
+            @Override
+            public int compare(Person123 o1, Person123 o2) {
+                if (o1.getId()> o2.getId()){
+                    return 1;
+                }else if (o1.getId()< o2.getId()){
+                    return -1;
+                }else {
+                    return 0;
+                }
+            }
+        });
+        System.out.println(people);
+        //Таким образом в классе Person не указан естественный порядок, но мы сделали сортировку по
+        //id c помощью Компартора, который мы передали в качестве второго аргумента , используя
+        // метод получения id, через создание Геттера в классе Person
+
+
+        List<String> animals = new ArrayList<>();
         animals.add("Frog");
         animals.add("Elephant");
         animals.add("Dog");
@@ -72,5 +96,27 @@ class StringLengthComparator implements Comparator<String> {
         //о1 < о2 =>-1;           compare(1,2) => -1
         //о1 == о2 =>0;           compare(1,1) => 0
 
+    }
+}
+class Person123 {
+
+    private int id;
+    private String name;
+
+    public Person123(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    @Override
+    public String toString() {
+        return "Person123{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
     }
 }
