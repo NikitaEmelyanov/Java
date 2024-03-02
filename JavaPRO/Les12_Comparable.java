@@ -20,19 +20,28 @@ public class Les12_Comparable {
         System.out.println(peopleSet);
     }
     private static void addElements (Collection collection){
-        collection.add(new Person0(1, "Bob"));
-        collection.add(new Person0(2, "Tom"));
+        collection.add(new Person0(4, "George"));
         collection.add(new Person0(3, "Katy"));
-        collection.add(new Person0(3, "George"));
+        collection.add(new Person0(1, "Mo"));
+        collection.add(new Person0(2, "Tom"));
     }
 }
 class Person0 implements Comparable <Person0> {
     private int Id;
     private String name;
+    private int id;
 
     public Person0(int id, String name) {
         Id = id;
         this.name = name;
+    }
+
+    public int getId() {
+        return Id;
+    }
+
+    public String getName() {
+        return name;
     }
 
     @Override
@@ -63,7 +72,14 @@ class Person0 implements Comparable <Person0> {
 
     //Реализация интерфейса Comparable прописывается в методе compareTo
     @Override
-    public int compareTo(Person0 o) {
-        return 0;
+    public int compareTo(Person0 o) { //Установка естественного порядка сортировки
+        if (this.name.length() > o.getName().length()){
+            return 1;
+        } else if (this.name.length() < o.getName().length()) {
+            return -1;
+        }else {
+            return 0;
+        }
+
     }
 }
