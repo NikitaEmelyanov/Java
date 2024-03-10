@@ -41,3 +41,5 @@ class Processor implements Runnable{
         countDownLatch.countDown(); // Метод countDown() декрементирует переменную на 1
     }
 }
+//Удобство класса CountDownLatch в том, что потоки полностью синхронизированы и точно не будет
+// возникать состояния гонки, при том ничего отдельно синхронизировать с помощью synchronized не нужно

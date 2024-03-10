@@ -49,3 +49,5 @@ class Processor1 implements Runnable{
         System.out.println("Thread with id "+ id + " proceeded");
     }
 }
+//Удобство класса CountDownLatch в том, что потоки полностью синхронизированы и точно не будет
+// возникать состояния гонки, при том ничего отдельно синхронизировать с помощью synchronized не нужно
