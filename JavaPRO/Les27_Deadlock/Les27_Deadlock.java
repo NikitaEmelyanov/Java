@@ -52,9 +52,13 @@ class Runner1 {
     public void secondThread(){
         Random random = new Random();
         for (int i = 0; i < 10000; i++) {
-            synchronized (account1){
-                synchronized (account2){
+            synchronized (account2){
+                synchronized (account1){
                     Account.transfer(account2,account1, random.nextInt(100));
+                    // Даже если не используется ReentrantLock, а используется synchronized блоки,
+                    // так же может возникнуть Deadlock при разном порядке использования локов,
+                    // только в отличие от ReentrantLock ничего сделать нельзя, кроме смены порядка
+                    // к одинаковому
                 }
             }
         }

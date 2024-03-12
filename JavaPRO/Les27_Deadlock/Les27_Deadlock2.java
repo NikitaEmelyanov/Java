@@ -1,6 +1,8 @@
 package JavaPRO.Les27_Deadlock;
 
 import java.util.Random;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 public class Les27_Deadlock2 {
     public static void main(String[] args) throws InterruptedException {
@@ -31,31 +33,69 @@ public class Les27_Deadlock2 {
 class Runner2 {
     private Account account1 = new Account();
     private Account account2 = new Account();
+
+    private Lock lock1 = new ReentrantLock();
+    private Lock lock2 = new ReentrantLock();
+private void takeLocks (Lock lock1, Lock lock2){
+    boolean firstLockTaken = false;
+    boolean secondLockTaken = false;
+
+    while (true) {
+        try {
+            firstLockTaken = lock1.tryLock();
+            secondLockTaken = lock2.tryLock();
+        } finally {
+            if (firstLockTaken && secondLockTaken) {
+                return;
+            }
+            if (firstLockTaken) {
+                lock1.unlock();
+            }
+            if (secondLockTaken) {
+                lock2.unlock();
+            }
+        }
+        try {
+            Thread.sleep(1);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        //Механика следующая: Если оба лока не забираются одновременно, тот лок который начал
+        // использоваться возвращается, после чего у другого потока появляется возможность
+        // забрать лок с помощью сна sleep(). Поскольку цикл бесконечный, выход из цикла
+        // осуществляется только если были забраны оба лока
+    }
+}
     public void firstThread(){
         Random random = new Random();
         for (int i = 0; i < 10000; i++) {
-            synchronized (account1){
-                synchronized (account2){
-                    Account.transfer(account1,account2, random.nextInt(100));
-                    //Для избежания состояния гонки был обернут синхронизованный блок в другой
-                    // синхронизованный блок с синхронизацией на разных объектах, это происходить потому
-                    // что один поток завладевает двумя мониторами обоих объектов, а второй поток не
-                    // получает доступ пока не освободятся мониторы
-
-                    //Поскольку такая структура вложенности сильно ухудшает восприятие, данная структура
-                    // не приветствуется в программировании и желательно реализовать такую синхронизацию
-                    // с помощью Lock
-                }
+            takeLocks(lock1,lock2);
+            try{
+                Account.transfer(account1,account2, random.nextInt(100));
+            }finally {
+                lock1.unlock();
+                lock2.unlock();
+                //Реализация с помощью ReentrantLock с вынесением локов в отдельный метод
             }
         }
     }
     public void secondThread(){
         Random random = new Random();
         for (int i = 0; i < 10000; i++) {
-            synchronized (account1){
-                synchronized (account2){
-                    Account.transfer(account2,account1, random.nextInt(100));
-                }
+            takeLocks(lock2,lock1);
+            // Если при ReentrantLock используется разный порядок использования локов в разных
+            // потоках, может случиться Deadlock, это происходит из-за того, что оба потока
+            // использовали lock(), и не могут передать монитор дальше так как мониторы разных
+            // переменных использовались в разных потоках, что даст взаимную блокировку обоих
+            // потоков
+            //Способы избежания Deadlock
+            //1) Не забирать мониторы в разных потоках в разном порядке
+            //2) Использовать метод tryLock() класса Lock
+            try{
+                Account.transfer(account2,account1, random.nextInt(100));
+            }finally {
+                lock1.unlock();
+                lock2.unlock();
             }
         }
     }
