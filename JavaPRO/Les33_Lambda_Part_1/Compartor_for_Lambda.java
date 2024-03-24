@@ -34,5 +34,16 @@ public class Compartor_for_Lambda {
             else return 0;
         });
         System.out.println(list);
+
+        //Лямбду выражение можно воспринимать как значение и записывает его в переменную
+        Comparator<String> comparator = ((s1,s2) -> {
+            if (s1.length()>s2.length()) return 1;
+            else if (s1.length()<s2.length()) return -1;
+            else return 0;
+        });
+        list.sort(comparator);
+        //После занесения лямбды в переменную, эту переменную можно установить в качестве аргумента
+        // в sort()
+        System.out.println(list);
     }
 }
