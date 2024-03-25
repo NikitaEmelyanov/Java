@@ -1,10 +1,9 @@
 package JavaPRO;
 
-import java.lang.reflect.Array;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class Les_33_Lambda_Part_2 {
+public class Les33_Lambda_Part_2 {
     public static void main(String[] args) {
         //Урок 34: Лямбда - выражения. Использование лямбды выражений в методах, которые оперируют
         // на коллекциях и массивах(часть II)
