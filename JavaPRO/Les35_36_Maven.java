@@ -1,6 +1,6 @@
 package JavaPRO;
 
-public class Les35_Maven_Part_1 {
+public class Les35_36_Maven {
     public static void main(String[] args) {
         // Приложения в IntelliJ IDEA создаются в двух форматах .jar для обычных приложений и
         // .war для веб приложений
@@ -15,5 +15,11 @@ public class Les35_Maven_Part_1 {
         // проекта выбирается  maven-archetype-quickstart, для создания веб-проекта выбирается
         // maven-archetype-webapp. Все зависимости прописываются в файле pom.xml. В пакете test будут
         // находиться тестовые файлы, а в пакете main основные
+
+        //Для добавления артефакта в pom.xml нужно зайти mvnrepository.com ввести в поиске название
+        // нужно библиотеки и скопировать код в pom.xml, далее после загрузки артефакта можно будет
+        // взаимодействовать с ней в Maven
+
+
     }
 }
