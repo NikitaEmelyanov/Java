@@ -1,13 +1,12 @@
 package Classes;
 
-import java.util.Random;
 //Для использования данного класса его нужно импортировать
 
-public class Random1 {
+public class Random {
     public static void main(String[] args) {
         //Класс Рандом
 
-        Random random = new Random();
+        java.util.Random random = new java.util.Random();
 
         for (int i = 0; i < 100; i++) {
             System.out.println(random.nextInt(6)+ 1);
