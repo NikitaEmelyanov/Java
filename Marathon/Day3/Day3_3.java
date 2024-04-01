@@ -12,21 +12,18 @@ public class Day3_3 {
         // сообщение “Деление на 0”.
         //Ключевое слово else использовать в этой программе нельзя.
 
-        for (double i = 0; i < 5; i++) {
-            System.out.println("Введите число 1");
-            Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
+        int i = 0;
+        while (i < 2) {
             double num1 = scanner.nextDouble();
-            System.out.println("Введите число 2");
             double num2 = scanner.nextDouble();
-            switch (scanner){
-                case (num2 !=0) :
-                   double result =  num1 / num2;
-                    System.out.println(result);
-                case (num2 ==0 ) :
-                    System.out.println("Деление на 0 ");
-                    continue;
-                default:
+            i++;
+
+            if (num2 == 0) {
+                System.out.println("Деление на 0");
+                continue;
             }
+            System.out.println(num1/num2);
         }
     }
 }
