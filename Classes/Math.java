@@ -2,7 +2,7 @@ package Classes;
 
 public class Math {
     public static void main(String[] args) {
-        //Класс Random
+        //Класс Math
 
         for (int i = 0; i < 100; i++) {
             System.out.println(java.lang.Math.round(java.lang.Math.random()*10));

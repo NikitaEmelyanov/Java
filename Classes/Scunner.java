@@ -7,7 +7,8 @@ public class Scunner {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        //Scanner - встроенный класс. scan - Название
+        //Класс Scanner
+
         // new Scanner - выделение памяти из класса Scanner
         //(System.in) - параметр, позволяющий получать данные от пользователя
         //Конструкция представляет собой создание объекта, где с помощью встроенного класса мы создали объект,
