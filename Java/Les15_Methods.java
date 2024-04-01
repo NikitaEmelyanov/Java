@@ -26,7 +26,7 @@ public class Les15_Methods {
         short num2 = 8;
         int result2 = summa ((short) 5, num2);
         info(String.valueOf(result2));
-        // при использовании .valueof для result2 ммы можем преобразовать значение int в строку String
+        // при использовании .valueof для result2 мы можем преобразовать значение int в строку String
     }
 
     public static void info(String word) {

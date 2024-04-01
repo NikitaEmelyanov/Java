@@ -3,6 +3,7 @@ package Java;
 public class Les13_Muttidimensonal_arrys {
     public static void main(String[] args) {
         //Урок 13: Многомерные массивы данных
+
         // Многомерный массив это массив данных состоящий из нескольких массивов
         // Многомерный массив представляет собой матрицу из высшей математики
         int [][] matrice = {{1,2,3},
