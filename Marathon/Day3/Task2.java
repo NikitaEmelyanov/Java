@@ -2,7 +2,7 @@ package Marathon.Day3;
 
 import java.util.Scanner;
 
-public class Day3_2 {
+public class Task2 {
     public static void main(String[] args) {
 
         //2. Реализовать программу, которая пока работает, принимает на вход от пользователя два

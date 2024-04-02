@@ -1,6 +1,6 @@
-package Marathon;
+package Marathon.Day4;
 
-public class Day4 {
+public class Task2 {
     public static void main(String[] args) {
 
     }

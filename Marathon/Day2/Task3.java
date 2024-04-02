@@ -2,7 +2,7 @@ package Marathon.Day2;
 
 import java.util.Scanner;
 
-public class Day2_3 {
+public class Task3 {
     public static void main(String[] args) {
 
         //Реализовать программу No2, используя цикл while.

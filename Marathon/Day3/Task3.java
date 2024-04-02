@@ -2,7 +2,7 @@ package Marathon.Day3;
 
 import java.util.Scanner;
 
-public class Day3_3 {
+public class Task3 {
     public static void main(String[] args) {
 
         //3. Реализовать программу, которая 5 раз запрашивает от пользователя два числа - делимое

@@ -2,7 +2,7 @@ package Marathon.Day2;
 
 import java.util.Scanner;
 
-public class Day2_4 {
+public class Task4 {
     public static void main(String[] args) {
 
         Scanner scanner2 = new Scanner(System.in);

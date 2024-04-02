@@ -2,7 +2,7 @@ package Marathon.Day2;
 
 import java.util.Scanner;
 
-public class Day2_2 {
+public class Task2 {
     public static void main(String[] args) {
 
         //2. Есть два числа, которые задаются пользователем через консоль (назовем эти два числа a и
