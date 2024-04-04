@@ -13,6 +13,29 @@ package Marathon.Day8;
  */
 public class Task1 {
     public static void main(String[] args) {
+        String stringNum = null;
+
+        long after = System.currentTimeMillis();
+
+        for (int i = 0; i < 20001; i++) {
+            stringNum = stringNum +" " + i+" ";
+        }
+        System.out.println(stringNum);
+
+        long before = System.currentTimeMillis();
+        System.out.println("Время выполнения цикла с классом String: "+ (before-after));
+
+        long after2 = System.currentTimeMillis();
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < 20001; i++) {
+            sb.append(" "+i+" ");
+        }
+        System.out.println(sb);
+        long before2 = System.currentTimeMillis();
+        System.out.println("Время работы цикла с классом StringBuilder: "+(before2-after2));
+    }
+
 
     }
-}
+
+
