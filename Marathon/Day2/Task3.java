@@ -1,11 +1,12 @@
 package Marathon.Day2;
+/**
+ * 3. Реализовать программу No2, используя цикл while.
+ */
 
 import java.util.Scanner;
 
 public class Task3 {
     public static void main(String[] args) {
-
-        //Реализовать программу No2, используя цикл while.
         Scanner scanner2 = new Scanner(System.in);
         int a = scanner2.nextInt();
         int b = scanner2.nextInt();
