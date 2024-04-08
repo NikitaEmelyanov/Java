@@ -1,11 +1,12 @@
 package AlgorithmsAndDataStructures;
+/**
+ * Урок 2. Мемоизация
+ */
 
 import java.util.Arrays;
 
 public class Les2_Memoization {
     public static void main(String[] args) {
-        //Урок 2. Мемоизация
-
         //Мемоизация (англ. Запоминание) - сохранение результатов выполнения функции для
         // предотвращения повторных вычислений
 

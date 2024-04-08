@@ -1,9 +1,11 @@
 package AlgorithmsAndDataStructures;
 
+/**
+ * Урок 3. Большое О (Big O Notation). Сложность алгоритма. Часть 1.
+ */
+
 public class Les3_Big_O_notation_Part_1 {
     public static void main(String[] args) {
-        //Урок 3. Большое О (Big O Notation). Сложность алгоритма. Часть 1.
-
         //Для того чтобы сравнивать алгоритмы нам надо научиться измерять их быстродействие
 
         //Подходы к измерению быстродействия:
