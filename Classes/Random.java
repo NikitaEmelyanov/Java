@@ -1,10 +1,11 @@
 package Classes;
-
 //Для использования данного класса его нужно импортировать
 
+/**
+ * Класс Рандом
+ */
 public class Random {
     public static void main(String[] args) {
-        //Класс Рандом
 
         java.util.Random random = new java.util.Random();
 

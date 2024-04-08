@@ -1,8 +1,10 @@
 package Classes;
 
+/**
+ * Класс String
+ */
 public class String {
     public static void main(String[] args) {
-        //Класс String
 
         //Метод isEmpty класса String возвращает true, если строка пустая, если строка
         //заполнена возвращает false

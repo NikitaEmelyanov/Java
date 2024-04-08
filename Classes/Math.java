@@ -1,9 +1,10 @@
 package Classes;
 
+/**
+ * Класс Math
+ */
 public class Math {
     public static void main(String[] args) {
-        //Класс Math
-
         for (int i = 0; i < 100; i++) {
             System.out.println(java.lang.Math.round(java.lang.Math.random()*10));
             //Метод random() класса Math дает возможность получить псевдослучайное число от 0 до 1

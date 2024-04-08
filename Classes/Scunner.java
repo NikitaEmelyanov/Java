@@ -3,6 +3,9 @@ package Classes;
 import java.util.Scanner;
 //Добавление встроенного класса Scanner. Класс импортируется автоматически если ввести его название.
 
+/**
+ * Класс Scanner
+ */
 public class Scunner {
 
     public static void main(String[] args) {
